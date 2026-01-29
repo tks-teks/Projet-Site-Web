@@ -5,21 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Variant extends Model
+class ProductReview extends Model
 {
     use HasFactory;
 
     protected $fillable = [
         'product_id',
-        'sku',
-        'attributes',
-        'price',
-        'stock',
-    ];
-
-    protected $casts = [
-        'attributes' => 'array',
-        'price' => 'decimal:2',
+        'user_id',
+        'rating',
+        'comment',
+        'status',
     ];
 
     public function product()
@@ -27,8 +22,8 @@ class Variant extends Model
         return $this->belongsTo(Product::class);
     }
 
-    public function stockMovements()
+    public function user()
     {
-        return $this->hasMany(StockMovement::class);
+        return $this->belongsTo(User::class);
     }
 }

@@ -19,8 +19,28 @@ class Product extends Model
         'seo_description',
     ];
 
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
     public function variants()
     {
         return $this->hasMany(Variant::class);
+    }
+
+    public function media()
+    {
+        return $this->hasMany(ProductMedia::class);
+    }
+
+    public function assignments()
+    {
+        return $this->hasMany(ProductAssignment::class);
+    }
+
+    public function reviews()
+    {
+        return $this->hasMany(ProductReview::class);
     }
 }

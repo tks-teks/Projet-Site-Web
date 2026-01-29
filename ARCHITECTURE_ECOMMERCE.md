@@ -26,6 +26,24 @@
 
 ---
 
+## 2.1) Structure des dossiers (monolithe modulaire)
+```
+backend/
+  app/
+    Http/Controllers/        # API REST (RBAC, catalogue, commandes, reporting)
+    Models/                  # Modèles métier (User, Role, Product, Order, Coupon...)
+  database/
+    migrations/              # Migrations SQL versionnées
+    sql/                     # Schéma relationnel consolidé
+frontend/
+  index.html                 # Landing page UX + sections métiers
+  assets/
+    css/                     # Styles
+    js/                      # Interactions UI
+```
+
+---
+
 ## 3) Modèle RBAC avancé
 ### 3.1 Rôles système par défaut
 - **Administrateur** : accès global, paramétrage, gestion sécurité. 
@@ -115,12 +133,29 @@
 
 ---
 
+## 7.1) Flux métier prioritaires (v1)
+- **Onboarding vendeur** : création compte → attribution rôle → assignation produits → activation.
+- **Cycle produit** : création → variantes → médias → publication → suivi stock.
+- **Commande** : panier → checkout → paiement → préparation → expédition → livraison → avis.
+- **Retour & remboursement** : demande retour → validation gestionnaire → remboursement.
+- **Audit** : journalisation actions sensibles + alertes sur anomalies (prix, remboursements, connexions).
+
+---
+
 ## 8) Suivi & Audit
 - **Journal d’activité centralisé**. 
 - Historique par utilisateur / module. 
 - Filtres (date, action, utilisateur). 
 - Export logs (CSV, JSON). 
 - Alertes activités suspectes (anomalies). 
+
+---
+
+## 8.1) Interfaces clés (UX/UI)
+- **Admin** : pilotage global, sécurité, utilisateurs, catalogue, promotions, reporting.
+- **Vendeur** : produits assignés, commandes liées, stocks, performance personnelle.
+- **Gestionnaire** : orchestration opérations, validation, retours, coordination logistique.
+- **Client** : catalogue, fiche produit, panier, checkout, historique commandes.
 
 ---
 
