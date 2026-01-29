@@ -5,30 +5,28 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Variant extends Model
+class WishlistItem extends Model
 {
     use HasFactory;
 
     protected $fillable = [
+        'wishlist_id',
         'product_id',
-        'sku',
-        'attributes',
-        'price',
-        'stock',
+        'variant_id',
     ];
 
-    protected $casts = [
-        'attributes' => 'array',
-        'price' => 'decimal:2',
-    ];
+    public function wishlist()
+    {
+        return $this->belongsTo(Wishlist::class);
+    }
 
     public function product()
     {
         return $this->belongsTo(Product::class);
     }
 
-    public function stockMovements()
+    public function variant()
     {
-        return $this->hasMany(StockMovement::class);
+        return $this->belongsTo(Variant::class);
     }
 }

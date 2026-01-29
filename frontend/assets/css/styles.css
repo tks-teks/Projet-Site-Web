@@ -249,6 +249,10 @@ body {
   gap: 1.5rem;
 }
 
+.grid--modules {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
 .feature,
 .dashboard {
   background: var(--card);
@@ -284,6 +288,38 @@ body {
   display: grid;
   gap: 1.5rem;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.timeline {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.timeline__item {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding: 1.5rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--card);
+}
+
+.timeline__item span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background: rgba(111, 124, 255, 0.2);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.timeline__item p {
+  color: var(--muted);
+  margin-top: 0.4rem;
 }
 
 .footer {
