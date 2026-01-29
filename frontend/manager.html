@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NovaCommerce — Dashboard Gestionnaire</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="dashboard-body">
+  <div class="dashboard-layout">
+    <aside class="sidebar">
+      <div class="brand">NovaCommerce</div>
+      <nav>
+        <a class="active" href="manager.html">Supervision</a>
+        <a href="#">Commandes</a>
+        <a href="#">Stocks</a>
+        <a href="#">Livraisons</a>
+        <a href="#">Retours</a>
+        <a href="#">Rapports</a>
+      </nav>
+    </aside>
+
+    <main class="dashboard-content">
+      <header class="dashboard-header">
+        <div>
+          <h1>Dashboard Gestionnaire</h1>
+          <p>Coordination des opérations et performance commerciale.</p>
+        </div>
+        <button class="primary">Valider les commandes</button>
+      </header>
+
+      <section class="kpi-grid">
+        <div class="kpi-card reveal">
+          <h3>Commandes à valider</h3>
+          <strong>82</strong>
+          <span>Priorité élevée</span>
+        </div>
+        <div class="kpi-card reveal">
+          <h3>Livraisons en cours</h3>
+          <strong>214</strong>
+          <span>Suivi temps réel</span>
+        </div>
+        <div class="kpi-card reveal">
+          <h3>Retours</h3>
+          <strong>16</strong>
+          <span>À traiter</span>
+        </div>
+        <div class="kpi-card reveal">
+          <h3>Performance zone</h3>
+          <strong>+14%</strong>
+          <span>Zone Sud</span>
+        </div>
+      </section>
+
+      <section class="dashboard-panels">
+        <div class="panel reveal">
+          <h2>Suivi logistique</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <strong>08:45</strong>
+              <span>Lot 23 dispatché (Zone Nord)</span>
+            </div>
+            <div class="timeline-item">
+              <strong>09:20</strong>
+              <span>Commande #9838 livrée à destination.</span>
+            </div>
+            <div class="timeline-item">
+              <strong>10:10</strong>
+              <span>Retour #9921 reçu, contrôle qualité.</span>
+            </div>
+          </div>
+        </div>
+        <div class="panel reveal">
+          <h2>Stocks globaux</h2>
+          <div class="inventory">
+            <div>
+              <span>Catégorie Mode</span>
+              <div class="progress"><span style="width: 68%"></span></div>
+            </div>
+            <div>
+              <span>Catégorie Electronique</span>
+              <div class="progress"><span style="width: 44%"></span></div>
+            </div>
+            <div>
+              <span>Catégorie Maison</span>
+              <div class="progress"><span style="width: 80%"></span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-panels">
+        <div class="panel reveal">
+          <h2>Commandes critiques</h2>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Zone</th>
+                <th>Délai</th>
+                <th>Statut</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#9821</td>
+                <td>Sud</td>
+                <td>24h</td>
+                <td><span class="status pending">À prioriser</span></td>
+              </tr>
+              <tr>
+                <td>#9812</td>
+                <td>Nord</td>
+                <td>12h</td>
+                <td><span class="status shipping">En route</span></td>
+              </tr>
+              <tr>
+                <td>#9802</td>
+                <td>Ouest</td>
+                <td>36h</td>
+                <td><span class="status paid">Validée</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="panel reveal">
+          <h2>Score opérations</h2>
+          <div class="chart-bars">
+            <div class="bar" style="--value: 78%"><span>Livraison</span></div>
+            <div class="bar" style="--value: 88%"><span>Validation</span></div>
+            <div class="bar" style="--value: 70%"><span>Retours</span></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NovaCommerce — Dashboard Vendeur</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="dashboard-body">
+  <div class="dashboard-layout">
+    <aside class="sidebar">
+      <div class="brand">NovaCommerce</div>
+      <nav>
+        <a class="active" href="seller.html">Tableau de bord</a>
+        <a href="#">Mes produits</a>
+        <a href="#">Variantes</a>
+        <a href="#">Stocks</a>
+        <a href="#">Commandes</a>
+        <a href="#">Retours</a>
+        <a href="#">Statistiques</a>
+      </nav>
+    </aside>
+
+    <main class="dashboard-content">
+      <header class="dashboard-header">
+        <div>
+          <h1>Dashboard Vendeur</h1>
+          <p>Vos ventes, votre stock et vos actions en temps réel.</p>
+        </div>
+        <button class="primary">Ajouter un produit</button>
+      </header>
+
+      <section class="kpi-grid">
+        <div class="kpi-card reveal">
+          <h3>Ventes du mois</h3>
+          <strong>320 000 XOF</strong>
+          <span>+12% vs mois dernier</span>
+        </div>
+        <div class="kpi-card reveal">
+          <h3>Commandes</h3>
+          <strong>128</strong>
+          <span>En cours : 12</span>
+        </div>
+        <div class="kpi-card reveal">
+          <h3>Produits actifs</h3>
+          <strong>46</strong>
+          <span>12 nouvelles variantes</span>
+        </div>
+        <div class="kpi-card reveal">
+          <h3>Retours</h3>
+          <strong>4</strong>
+          <span>Traitement rapide</span>
+        </div>
+      </section>
+
+      <section class="dashboard-panels">
+        <div class="panel reveal">
+          <h2>Commandes récentes</h2>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Produit</th>
+                <th>Montant</th>
+                <th>Statut</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#9842</td>
+                <td>Casque Audio Pro</td>
+                <td>75 000 XOF</td>
+                <td><span class="status shipping">Expédiée</span></td>
+              </tr>
+              <tr>
+                <td>#9839</td>
+                <td>Montre Nova</td>
+                <td>52 300 XOF</td>
+                <td><span class="status pending">En préparation</span></td>
+              </tr>
+              <tr>
+                <td>#9835</td>
+                <td>Sneakers Pulse</td>
+                <td>62 900 XOF</td>
+                <td><span class="status paid">Payée</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="panel reveal">
+          <h2>Produits les plus vendus</h2>
+          <div class="list-card">
+            <div>
+              <strong>Nova Earbuds</strong>
+              <span>145 ventes</span>
+            </div>
+            <div>
+              <strong>Montre Nova</strong>
+              <span>98 ventes</span>
+            </div>
+            <div>
+              <strong>Sneakers Pulse</strong>
+              <span>87 ventes</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NovaCommerce — Dashboard Administrateur</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="dashboard-body">
+  <div class="dashboard-layout">
+    <aside class="sidebar">
+      <div class="brand">NovaCommerce</div>
+      <nav>
+        <a class="active" href="admin.html">Vue d’ensemble</a>
+        <a href="#">Utilisateurs & RBAC</a>
+        <a href="#">Catalogue</a>
+        <a href="#">Commandes</a>
+        <a href="#">Paiements</a>
+        <a href="#">Livraisons</a>
+        <a href="#">Rapports</a>
+        <a href="#">Paramètres</a>
+      </nav>
+    </aside>
+
+    <main class="dashboard-content">
+      <header class="dashboard-header">
+        <div>
+          <h1>Dashboard Administrateur</h1>
+          <p>Supervision globale de la plateforme, sécurité et opérations.</p>
+        </div>
+        <button class="primary">Exporter les rapports</button>
+      </header>
+
+      <section class="kpi-grid">
+        <div class="kpi-card reveal">
+          <h3>Chiffre d’affaires</h3>
+          <strong>1,2M XOF</strong>
+          <span>+18% ce mois</span>
+        </div>
+        <div class="kpi-card reveal">
+          <h3>Commandes</h3>
+          <strong>4 892</strong>
+          <span>+9% vs semaine dernière</span>
+        </div>
+        <div class="kpi-card reveal">
+          <h3>Fraudes bloquées</h3>
+          <strong>36</strong>
+          <span>Alertes en temps réel</span>
+        </div>
+        <div class="kpi-card reveal">
+          <h3>Disponibilité</h3>
+          <strong>99,99%</strong>
+          <span>SLA mensuel</span>
+        </div>
+      </section>
+
+      <section class="dashboard-panels">
+        <div class="panel reveal">
+          <h2>Activité récente</h2>
+          <ul class="activity-list">
+            <li>Nouvelle promo « Vente Flash » créée par Admin.</li>
+            <li>Vendeur A a mis à jour 12 produits.</li>
+            <li>Validation de 48 commandes en zone Nord.</li>
+            <li>Remboursement autorisé (commande #9842).</li>
+          </ul>
+        </div>
+        <div class="panel reveal">
+          <h2>Stocks critiques</h2>
+          <div class="inventory">
+            <div>
+              <span>Smartphone Nova X</span>
+              <div class="progress"><span style="width: 24%"></span></div>
+            </div>
+            <div>
+              <span>Sneakers Pulse</span>
+              <div class="progress"><span style="width: 42%"></span></div>
+            </div>
+            <div>
+              <span>Casque Audio Pulse</span>
+              <div class="progress"><span style="width: 18%"></span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-panels">
+        <div class="panel reveal">
+          <h2>Commandes en cours</h2>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Client</th>
+                <th>Montant</th>
+                <th>Statut</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#9842</td>
+                <td>Marie T.</td>
+                <td>120 500 XOF</td>
+                <td><span class="status pending">En validation</span></td>
+              </tr>
+              <tr>
+                <td>#9838</td>
+                <td>Yao K.</td>
+                <td>89 900 XOF</td>
+                <td><span class="status shipping">En livraison</span></td>
+              </tr>
+              <tr>
+                <td>#9832</td>
+                <td>Franck D.</td>
+                <td>64 200 XOF</td>
+                <td><span class="status paid">Payée</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="panel reveal">
+          <h2>Performance vendeurs</h2>
+          <div class="chart-bars">
+            <div class="bar" style="--value: 85%"><span>Vendeur A</span></div>
+            <div class="bar" style="--value: 70%"><span>Vendeur B</span></div>
+            <div class="bar" style="--value: 92%"><span>Vendeur C</span></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
